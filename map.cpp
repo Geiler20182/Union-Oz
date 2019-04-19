@@ -3,7 +3,7 @@
 #include <map>
 
 using namespace std;
-int main()  {
+int main(){
 
   map<string, string> asociativo;
 
@@ -24,22 +24,32 @@ int main()  {
       }
 
   }
+  for (size_t i = 0; i < p-1; i++) {
+    cout << enty[i];
+  }
+  cout<<endl;
   int i = 0, k = 0;
   while(i < p-1){
 
-      if ((enty[i] == '-' && enty[i+1] == '>') || enty[i] == ':' ) {
+      if(enty[i] == '-' && enty[i+1] == '>') {
         arr[i] = '=';
         i++;
       }
+      else if (enty[i] == ':' ) {
+        arr[i] = '=';
+        //i++;
+      }
+
       else{
         arr[i] = enty[i];
+
       }
       i++;
   }
-  for (int j = 0; j < i; j++) {
+  /*for (int j = 0; j < i; j++) {
     cout<<arr[j];
   }
-cout<<endl;
+  cout<<endl;
   while (k < i) {
 
       string clave, valor;
@@ -55,44 +65,7 @@ cout<<endl;
       cout<<clave<<'-'<<valor<<endl;
       k++;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  //asociativo[clave] = valor;
-
-/*  //std::cout << valor.first  << '\n';
-  map<string, string> ::iterator iter;
-  for (iter = asociativo.begin(); iter != asociativo.end(); iter++) {
-      std::cout << iter->first << '='<<iter->second << '\n';
-  }
-  /*map<string, string>::iterator iter;
-  for ( iter = asociativo.begin(); iter != asociativo.end(); iter++) {
-    c*/
-
+*/
   return 0;
+
 }
